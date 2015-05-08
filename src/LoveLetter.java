@@ -23,7 +23,7 @@ public class LoveLetter {
     }
 
     public static void main(String[] args) {
-        LoveLetter soln = new LoveLetter();
+        LoveLetter soln = new LoveLetter() ;
         Scanner obj = new Scanner(System.in);
         int n = obj.nextInt();
         for (int i = 0; i < n; i++) {
