@@ -41,11 +41,7 @@ public class GameofThrones {
                 total++;
         }
 
-        if (total > 3 && total % 2 != 0) //NEED TO FIX THIS LOGIC
-            return false;
-
-        else
-            return true;
+        return !(total > 3 && total % 2 != 0);
 
     }
 
