@@ -44,18 +44,28 @@ public class Main {
 
         while(count>0)
         {
+            
             String s = obj.next();
-            ArrayList<String> arrayList = new ArrayList<>();
-            String str = main.sort(s);
-            main.permutations("",str,arrayList);
-            listLinkedHashMap.put(s, arrayList);
-
-            String finalanswer  = main.find(listLinkedHashMap,s);
-
-            if(finalanswer.equals(s))
+            if(s.length() == 1)
+            {
                 System.out.println("no answer");
+            }
             else
-                System.out.println(finalanswer);
+            {
+                ArrayList<String> arrayList = new ArrayList<>();
+                String str = main.sort(s);
+                main.permutations("",str,arrayList);
+                listLinkedHashMap.put(s, arrayList);
+
+                String finalanswer  = main.find(listLinkedHashMap, s);
+
+                if(finalanswer.equals(s))
+                    System.out.println("no answer");
+                else
+                    System.out.println(finalanswer);
+
+            }
+
             count--;
         }
     }
